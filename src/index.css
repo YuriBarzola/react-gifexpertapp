@@ -1,13 +1,57 @@
-body {
+*,body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+h2{
+  text-align: center;
+  margin: .85em 0;
+}
+form{
+  width: 100%;
+  margin: 10px 0;
+}
+input{
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  color: #222;
+}
+.card-grid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card {
+  width: calc(100% / 2 - 4px);
+  height: 200px;
+  border: 1px solid #222;
+  margin: 2px;
+}
+
+
+@media(min-width:400px){
+  .card{
+    width: calc(100% / 3 - 4px);
+  }
+}
+@media(min-width:600px){
+  .card{
+    width: calc(100% / 4 - 4px);
+  }
+}
+@media(min-width:800px){
+  .card{
+    width: calc(100% / 5 - 4px);
+  }
+}
+
+
+
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
